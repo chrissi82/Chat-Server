@@ -12,3 +12,14 @@ build/
 *.swp
 .DS_Store
 Thumbs.db
+
+# Prüfungsvorbereitung & Präsentationsunterlagen (nicht für das Repo bestimmt)
+Ausfuehrungsplan.md
+Phase1-2_Anleitung.md
+Redemanuskript_Chat_Server.docx
+*.pptx
+*.docx
+*.tex
+*.pdf
+test.cpp
+g++ -o server.exe server.cpp -lws2_32 -s.cpp -lws2_32 -s.cpp -lws2_32 -s
