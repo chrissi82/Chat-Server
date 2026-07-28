@@ -1,0 +1,100 @@
+\documentclass[a4paper,11pt]{article}
+
+% ---------- Sprache & Kodierung ----------
+% Kompilierung mit XeLaTeX oder LuaLaTeX (Unicode-nativ, keine
+% inputenc/fontenc-Pakete noetig).
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+% ---------- Layout ----------
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+% ---------- Code-Listings ----------
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{codebg}{rgb}{0.96,0.96,0.96}
+\definecolor{codegreen}{rgb}{0,0.5,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeblue}{rgb}{0,0,0.6}
+\definecolor{framegray}{rgb}{0.8,0.8,0.8}
+
+\lstdefinestyle{cppstyle}{
+    backgroundcolor=\color{codebg},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{codeblue}\bfseries,
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codegreen},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=6pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+    frame=single,
+    rulecolor=\color{framegray},
+    language=C++,
+}
+\lstset{style=cppstyle}
+
+\lstdefinestyle{cmakestyle}{
+    backgroundcolor=\color{codebg},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{codeblue}\bfseries,
+    numberstyle=\tiny\color{codegray},
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    numbers=left,
+    numbersep=6pt,
+    frame=single,
+    rulecolor=\color{framegray},
+    tabsize=2,
+}
+
+% ---------- Kopf-/Fusszeile ----------
+\setlength{\headheight}{14.5pt}
+\addtolength{\topmargin}{-2.5pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Chat-Server -- Quellcode}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ---------- Titeldaten ----------
+\title{TCP-Chat-Server in C++\\\large Quellcode}
+\author{Christine Münzberg}
+\date{28. Juli 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{server.cpp}
+
+\lstinputlisting[style=cppstyle,caption={server.cpp}]{server.cpp}
+
+% ============================================================
+\section{client.cpp}
+
+\lstinputlisting[style=cppstyle,caption={client.cpp}]{client.cpp}
+
+% ============================================================
+\section{CMakeLists.txt}
+
+\lstinputlisting[style=cmakestyle,language=bash,caption={CMakeLists.txt}]{CMakeLists.txt}
+
+\end{document}

@@ -1,0 +1,14 @@
+# Kompilierte Binärdateien
+*.exe
+*.obj
+*.o
+*.out
+
+# CMake Build-Verzeichnis
+build/
+
+# Editor-/OS-Dateien
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
