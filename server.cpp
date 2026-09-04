@@ -6,7 +6,7 @@
 #include <iostream>       // Für cout und cin
 #include <string>         // Für std::string
 #include <winsock2.h>     // Windows-Socket-Bibliothek
-dir
+
 // Winsock2-Bibliothek beim Linker einbinden
 #pragma comment(lib, "ws2_32.lib")
 
